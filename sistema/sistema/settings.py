@@ -55,7 +55,7 @@ ROOT_URLCONF = 'sistema.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'Templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,5 +134,8 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = "restaurantetepotzotlan1@gmail.com"  
 EMAIL_HOST_PASSWORD = "lftq myzf pmvi eorb"  
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+LOGIN_REDIRECT_URL = '/perfil/'
+LOGOUT_REDIRECT_URL = "/login/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
